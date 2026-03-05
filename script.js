@@ -51,7 +51,7 @@ console.log(graph1);
 
 //BFS - breath first search
 
-let graph = {
+let graph3 = {
   A: ["B", "C"],
   B: ["D"],
   C: ["E"],
@@ -69,7 +69,7 @@ function bfs(start) {
     if (!visited.has(node)) {
       console.log(node);
       visited.add(node);
-      queue.push(...graph[node]);
+      queue.push(...graph3[node]);
     }
   }
 }
@@ -87,7 +87,42 @@ bfs("A");
 // Traversal order
 // A → B → C → D → E
 
+/// Depth First search
 
+/// code
+
+let graph4 = {
+  A: ["B", "C"],
+  B: ["D"],
+  C: ["E"],
+  D: [],
+  E: []
+};
+
+function dfs(node, visited = new Set()) {
+  if (visited.has(node)) return;
+
+  console.log(node);
+  visited.add(node);
+
+  for (let neighbor of graph4[node]) {
+    dfs(neighbor, visited);
+  }
+}
+
+dfs("A");
+
+
+//expected output
+
+// A
+// B
+// C
+// D
+// E
+
+// Traversal order
+// A → B → C → D → E
 
 
 
