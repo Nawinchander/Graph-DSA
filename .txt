@@ -1,0 +1,4 @@
+A Graph in Data Structures represents connections between nodes (vertices).
+Examples: social networks, road maps, internet connections, etc.
+
+In JavaScript, a graph is usually implemented using an Adjacency List (object or Map).
