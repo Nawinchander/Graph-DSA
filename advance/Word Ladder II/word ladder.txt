@@ -1,0 +1,15 @@
+Given beginWord, endWord, and a wordList, return all shortest transformation sequences.
+
+Rules:
+Change one letter at a time
+Each transformed word must exist in wordList
+
+
+Approach (Advanced):
+Use BFS to build shortest paths level by level
+Then use backtracking (DFS) to reconstruct all paths
+Avoid revisiting nodes in the same level (critical optimization)
+
+
+
+
