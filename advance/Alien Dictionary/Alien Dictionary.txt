@@ -1,0 +1,10 @@
+Given a sorted dictionary of an alien language, determine the order of characters.
+
+Build graph:
+Compare adjacent words
+First different character → edge
+Apply Topological Sort (Kahn’s BFS)
+Detect cycle → return ""
+
+
+
